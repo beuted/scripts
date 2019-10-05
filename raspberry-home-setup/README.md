@@ -102,16 +102,3 @@ If you wish to intall the web UI follow the part 2 of: https://www.howtogeek.com
     Omit the `Guest ok = yes` if you don't want to allow guests (but that didn't work for me, I have to look into it)
     3. `sudo smbpasswd -a pi`
 3. Restart the samba deamon `sudo service smbd restart`
-
-///////////
-
- /var/lib/samba/dhcp.conf.
-
-1. Unmounted my external hard drive that Ubuntu had mounted automatically. You can do this via "unmount" in terminal or simply right clicking on the drive and choosing Unmount.
-
-2. terminal: "sudo fdisk -l"
-This listed my drives. I'm running Plex on a server that has 5 or 6 drives. My external was easy to figure out because it was unlike the internal drives, in addition it had the filesystem NTFS (a Windows filesystem, not a Linux filesystem). My external turned out to be /dev/sda1.
-
-3. terminal: "sudo mkdir /media/external"
-
-4. terminal: "sudo mount -t ntfs-3g /dev/sda1 /media/external"

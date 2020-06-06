@@ -82,7 +82,7 @@ If you wish to intall the web UI follow the part 2 of: https://www.howtogeek.com
 
 
 
-# Making the Disk Available Using SMB
+## Making the Disk Available Using SMB
 
 1. `sudo apt-get install samba samba-common-bin` (if asked "Modify smb.conf to use WINS settings from DHCP?" choose No)
 2. Edit `sudo nano /etc/samba/smb.conf` and add
@@ -103,7 +103,7 @@ If you wish to intall the web UI follow the part 2 of: https://www.howtogeek.com
     3. `sudo smbpasswd -a pi`
 3. Restart the samba deamon `sudo service smbd restart`
 
-# Setting up SSH Keys
+## Setting up SSH Keys
 1. `cd ~` and `mkdir .ssh` if not there. `cd .ssh` & `touch authorized_keys`
 2. Set permissions `chmod 700 ~/.ssh` and `chmod 600 ~/.ssh/authorized_keys`
 3. Create the key pair on your client with `ssh-keygen` if you don't have one (no password, default name)
